@@ -32,21 +32,26 @@ JsUser.email= "dfhao@gmail.com"  //this way we can change the value of any key
 
 //to avoid any change in object keys later on, we can use FREEZE
 
-Object.freeze(JsUser)
-JsUser.email = "hitesh@microsoft.com"
-console.log(JsUser);
+// Object.freeze(JsUser)
+// JsUser.email = "hitesh@microsoft.com"
+// console.log(JsUser);
 
 
 
 //treat functions just  like a variable
 
+JsUser.greeting = function(){
+    console.log("Hello Js User")
+}
+console.log(JsUser.greeting)//function execute nhi hua fn ka reference wapis aaya h
+console.log(JsUser.greeting())
 
-// JsUser.greeting = function(){
-//     console.log("Hello JS user");
-// }
-// JsUser.greetingTwo = function(){
-//     console.log(`Hello JS user, ${this.name}`);
-// }
 
-// console.log(JsUser.greeting());
-// console.log(JsUser.greetingTwo());  
+//very important concept
+
+
+JsUser.greetingTwo = function(){
+     console.log(`Hello JsUser, ${this.name}`) //string interpulation
+     }
+
+ console.log(JsUser.greetingTwo());  
