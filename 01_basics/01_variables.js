@@ -44,7 +44,23 @@ let accountState;// in js it is our choice to use ;
 
  * let const- let const new js mein hai
               let const braces scoped hota hai
+
               
+function outerFunction() {
+    let outerVariable = "I am outside!";
+    
+    function innerFunction() {
+        let innerVariable = "I am inside!";
+        console.log(outerVariable);  // Accessible
+        console.log(innerVariable);  // Accessible
+    }
+    
+    innerFunction();
+    console.log(outerVariable);  // Accessible
+    // console.log(innerVariable);  // Not accessible, would cause an error
+}
+
+outerFunction();
 
 
 */
