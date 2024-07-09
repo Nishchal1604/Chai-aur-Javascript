@@ -2,5 +2,3 @@ mdn good readable notes/ documentation for javascript           but this is not 
 
 ECMA script   original      //tc39.ec
 
-
-I Love coding
